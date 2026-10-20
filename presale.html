@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>預售屋買賣契約檢查表</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="crumb no-print"><a href="index.html">← 工具箱首頁</a></div>
+      <h1>預售屋買賣契約檢查表</h1>
+      <div id="summary" class="summary"></div>
+    </div>
+    <div class="actions no-print">
+      <button id="btnPrint" class="primary">列印／存 PDF</button>
+      <button id="btnExport">匯出 JSON</button>
+      <label class="btn file">匯入 JSON<input type="file" id="fileImport" accept=".json,application/json"></label>
+    </div>
+  </header>
+
+  <main>
+    <div id="storageWarn" class="warn no-print" hidden></div>
+
+    <section class="card">
+      <div class="grid">
+        <label class="field"><span>建案／物件名稱</span><input type="text" id="metaProject" maxlength="200" placeholder="例：○○建案 A3 棟 5 樓（示範）"></label>
+        <label class="field"><span>檢查日期</span><input type="date" id="metaDate"></label>
+        <label class="field"><span>檢查人</span><input type="text" id="metaChecker" maxlength="200" placeholder="例：買方本人／承辦人"></label>
+      </div>
+      <div class="meter" style="margin-top:10px">
+        <div class="bar big"><i id="overallBar"></i></div>
+        <strong id="overallPct">0%</strong>
+      </div>
+      <div id="overallStats" class="stats"></div>
+      <p class="hint" id="howTo"></p>
+    </section>
+
+    <section class="card" id="issueCard">
+      <h2>有問題的項目</h2>
+      <div id="issueBox"></div>
+    </section>
+
+    <div class="toolbar no-print card">
+      <input type="search" id="search" placeholder="搜尋條文關鍵字，例如：交屋保留款" aria-label="搜尋">
+      <label><input type="checkbox" id="onlyTodo"> 只看未檢查</label>
+      <button id="btnExpand">全部展開</button>
+      <button id="btnCollapse">全部收合</button>
+      <button id="btnReset">清除全部</button>
+    </div>
+
+    <div id="sections"></div>
+
+    <section class="card note-box">
+      <h2>資料來源與聲明</h2>
+      <p id="sourceNote"></p>
+      <p class="hint">本檢查表原則上僅供自我檢查參考，不構成法律意見；如有疑義請洽主管機關、律師或地政士。資料最後檢查日期：<span id="lastChecked"></span>。</p>
+    </section>
+  </main>
+
+  <footer>資料只存在你的瀏覽器・<a href="index.html">回工具箱首頁</a></footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/data-presale.js"></script>
+  <script src="js/app-common.js"></script>
+  <script src="js/app-presale.js"></script>
+</body>
+</html>
