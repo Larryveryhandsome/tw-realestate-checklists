@@ -1,0 +1,6 @@
+node_modules/
+# 匯出的檢查結果可能含個人資料，不要進 git
+*.json
+!package.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>物件介紹四大性質工作表</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="crumb no-print"><a href="index.html">← 工具箱首頁</a></div>
+      <h1>物件介紹四大性質工作表</h1>
+      <div class="summary">使用性、機能性、建設性、未來性：填重點，自動產生三種介紹文。</div>
+    </div>
+    <div class="actions no-print">
+      <button id="btnPrint" class="primary">列印／存 PDF</button>
+      <button id="btnClear">清空欄位</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="storageWarn" class="warn no-print" hidden></div>
+
+    <section class="card no-print">
+      <h2>草稿</h2>
+      <div class="drafts">
+        <input type="text" id="draftName" maxlength="60" placeholder="草稿名稱（預設用案名）" aria-label="草稿名稱">
+        <button id="btnSave" class="primary">儲存草稿</button>
+        <select id="draftList" aria-label="已存草稿"></select>
+        <button id="btnLoad">載入</button>
+        <button id="btnDelete">刪除</button>
+      </div>
+      <p class="hint">目前編輯中的內容會自動暫存；「儲存草稿」可以保留多個物件。草稿只存在這台電腦的瀏覽器。</p>
+    </section>
+
+    <section class="card">
+      <h2>完整度</h2>
+      <div class="meter"><div class="bar big"><i id="meterBar"></i></div><strong id="meterPct">0%</strong></div>
+      <div id="meterChips" class="chips"></div>
+      <p class="hint" id="meterHint"></p>
+    </section>
+
+    <div id="fields" class="no-print"></div>
+
+    <section class="card">
+      <h2>產生的介紹文</h2>
+      <div class="tabs no-print" role="tablist" id="tabs"></div>
+      <textarea id="output" class="out no-print" readonly aria-label="介紹文"></textarea>
+      <div class="actions no-print" style="margin-top:8px">
+        <button id="btnCopy" class="primary">複製這一版</button>
+        <span class="hint">產生後請再自己讀一遍，確認數字與用詞正確。</span>
+      </div>
+      <div id="printOut" class="print-out"></div>
+    </section>
+
+    <section class="card note-box">
+      <h2>撰寫提醒</h2>
+      <ul>
+        <li>坪數、使用分區、屋況請以權狀、謄本、使用分區證明及現況為準。</li>
+        <li>未來建設請寫「規劃中」並註明以政府公告為準，避免保證時程或漲幅。</li>
+        <li>不要在公開貼文放屋主姓名、門牌號碼等個人資料。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>資料只存在你的瀏覽器・<a href="index.html">回工具箱首頁</a><p class="custom-ad">需要改成你們公司的版本、幫忙安裝或串接？加 LINE 官方帳號 <a href="https://line.me/R/ti/p/@812ibtir" target="_blank" rel="noopener">@812ibtir</a>（留白事務所・林其衞），原則上 1～2 個工作天回覆報價。</p></footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/app-common.js"></script>
+  <script src="js/app-pitch.js"></script>
+</body>
+</html>

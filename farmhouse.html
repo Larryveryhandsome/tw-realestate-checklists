@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>農舍興建資格自我檢查</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="crumb no-print"><a href="index.html">← 工具箱首頁</a></div>
+      <h1>農舍興建資格自我檢查</h1>
+      <div class="summary">回答下面的問題，下方會即時顯示初步結果與理由。</div>
+    </div>
+    <div class="actions no-print">
+      <button id="btnPrint" class="primary">列印／存 PDF</button>
+      <button id="btnReset">清除答案</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="storageWarn" class="warn no-print" hidden></div>
+    <div class="warn">原則上僅供自我初步檢查，不構成法律意見；請以地方主管機關（縣市政府）審查為準。各縣市可能另有自治規定。</div>
+
+    <form id="form" class="no-print" autocomplete="off" onsubmit="return false"></form>
+
+    <section class="card" id="resultCard" aria-live="polite">
+      <h2>初步結果</h2>
+      <div id="verdict" class="verdict"></div>
+      <div id="counts" class="stats"></div>
+      <div id="results"></div>
+      <p class="hint" id="disclaimer"></p>
+    </section>
+
+    <section class="card">
+      <h2>其他提醒</h2>
+      <ul id="reminders"></ul>
+    </section>
+
+    <section class="card note-box">
+      <h2>本工具使用的門檻</h2>
+      <p class="hint">法規依據：<span id="lawName"></span>・法規版本：<span id="lawVersion"></span>・最後檢查日期：<span id="lastChecked"></span></p>
+      <p class="hint">標示「需確認」的門檻代表維護者不確定是否為現行規定，本工具遇到這些門檻只會顯示「需要再確認」。門檻值寫在 <code>js/data-farmhouse.js</code>，法規修正時改那個檔即可。</p>
+      <div class="scroll"><table class="rules-tbl" id="rulesTbl"></table></div>
+    </section>
+  </main>
+
+  <footer>資料只存在你的瀏覽器・<a href="index.html">回工具箱首頁</a><p class="custom-ad">需要改成你們公司的版本、幫忙安裝或串接？加 LINE 官方帳號 <a href="https://line.me/R/ti/p/@812ibtir" target="_blank" rel="noopener">@812ibtir</a>（留白事務所・林其衞），原則上 1～2 個工作天回覆報價。</p></footer>
+
+  <script src="js/core.js"></script>
+  <script src="js/data-farmhouse.js"></script>
+  <script src="js/app-common.js"></script>
+  <script src="js/app-farmhouse.js"></script>
+</body>
+</html>

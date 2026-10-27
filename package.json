@@ -1,0 +1,10 @@
+{
+  "name": "tw-realestate-checklists",
+  "version": "1.0.0",
+  "description": "不動產檢查表工具箱：預售屋契約檢查表、農舍興建資格自我檢查、物件介紹四大性質工作表（純網頁、免安裝）",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\""
+  }
+}
